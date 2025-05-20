@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My ChatGPT Clone</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1 { color: #4CAF50; }
+        input, button { padding: 10px; font-size: 16px; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+        #chatbox { margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🤖 ChatGPT Clone</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Ask me anything..." required>
+        <button type="submit">Send</button>
+    </form>
+    {% if bot_response %}
+    <div id="chatbox">
+        <p><strong>AI:</strong> {{ bot_response }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
